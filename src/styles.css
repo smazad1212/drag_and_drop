@@ -1,0 +1,186 @@
+@font-face {
+  font-family: 'KongshoMJ';
+  src: url('../assets/fonts/KongshoMJ Regular.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Bitopi Bijoy';
+  src: url('../assets/fonts/Bitopi Bijoy.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #121212;
+}
+
+.title {
+  font-size: 24px;
+  text-align: center;
+  font-family: 'KongshoMJ';
+}
+
+.text-green {
+  color: #006a4e;
+}
+
+.text-red {
+  color: #f42a41;
+}
+
+.skew {
+  padding: 0 6px;
+  transform: rotate(-10deg);
+}
+.skew:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transform: skewX(-20deg);
+}
+
+.bg-green.skew:after {
+  background-color: #006a4e;
+}
+.bg-red.skew:after {
+  background-color: #f42a41;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.gradient-dark {
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(0, 0, 0, 0.5)), color-stop(100%, rgba(0, 0, 0, 0.5)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%);
+  opacity: 0.25;
+}
+
+.gradient-light {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+}
+
+#banner {
+  position: relative;
+  height: 250px;
+  width: 300px;
+  background-color: #57f4ee;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.title-container {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  width: 100%;
+}
+
+.map-container {
+  position: relative;
+  top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#map-completed {
+  display: none;
+  position: absolute;
+  top: -50px;
+}
+
+.images-container {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  text-align: center;
+  grid-gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.images-container img {
+  cursor: pointer;
+}
+
+#announcement {
+  display: none;
+  position: relative;
+  top: 70px;
+  font-family: 'Bitopi Bijoy';
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  z-index: 0;
+}
+
+#announcement div {
+  position: absolute;
+}
+
+#announcement div:nth-child(1) {
+  top: 10px;
+  left: 86px;
+  z-index: -1;
+}
+
+#announcement div:nth-child(2) {
+  top: 30px;
+  left: 48px;
+  font-size: 24px;
+  line-height: 88%;
+}
+
+#announcement div:nth-child(3) {
+  top: 50px;
+  left: 58px;
+  z-index: -1;
+}
+.bongobondhu-img {
+  opacity: 0;
+}
+.bongobondhu-img.show {
+  opacity: 0.2;
+}

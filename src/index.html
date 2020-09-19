@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <meta charset="utf-8"/>
+    <title>Drag Task</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="./styles.css"/>
+</head>
+<body>
+<section id="banner">
+    <div class="overlay">
+        <div class="gradient-dark"></div>
+        <div class="gradient-light"></div>
+        <div class="gradient-light"></div>
+        <img class="bongobondhu-img" src="../assets/bongobondhu.png" alt="bongobondhu">
+    </div>
+    
+    <div id="instructions" class="title-container">
+        <h1 class="title">
+            <span class="text-green">Dbœqb¸‡jv </span>
+            <span class="text-red">emvb gvbwP‡Î</span>
+        </h1>
+    </div>
+
+    <div class="map-container">
+        <img src="./../assets/map.png" id="map" alt="map" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="./../assets/map-complete.png" id="map-completed" alt="map">
+    </div>
+    
+    <div class="images-container" id="draggable">
+        <img src="./../assets/img1.png" id="ruppur" draggable="true" ondragstart="drag(event)"
+             alt="Ruppur nuclear power plant">
+        <img src="./../assets/img2.png" id="bangabandhu" draggable="true" ondragstart="drag(event)"
+             alt="Bangabandhu bridge">
+        <img src="./../assets/img3.png" id="hatirjheel" draggable="true" ondragstart="drag(event)" alt="Hatirjheel">
+        <img src="./../assets/img4.png" id="padma" draggable="true" ondragstart="drag(event)" alt="Padma bridge">
+    </div>
+
+    <div id="announcement">
+        <div class="bg-green skew">RvwZi wcZvi</div>
+        <div class="bg-red skew">kZZg Rb¥evwl©Kx‡Z</div>
+        <div class="bg-green skew">†`k †mvbvi evsjvi c‡_</div>
+    </div>
+</section>
+<script type="text/javascript" src="js/plugins/anime/anime.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
