@@ -31,6 +31,7 @@ body {
   font-size: 24px;
   text-align: center;
   font-family: 'KongshoMJ';
+  font-weight: 400;
 }
 
 .text-green {
@@ -183,4 +184,13 @@ body {
 }
 .bongobondhu-img.show {
   opacity: 0.2;
+}
+
+particle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
 }
